@@ -1,0 +1,307 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[UTF8]{ctex}
+\usepackage{graphicx}
+\begin{document}
+  \title{实验报告2}
+  \author{\\姓名:郭千纯\\
+		\\学号：23020007033\\
+		\\课程：系统开发工具基础\\}
+  \date{\today\\}
+  \maketitle
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+\section{github链接}
+\section{练习内容}
+\section{练习内容}
+Shell 工具和脚本、编辑器（Vim）、数据整理；
+
+\section{实例及结果}
+
+\subsection{实例1}
+阅读 man ls 
+\\然后使用ls 命令进行如下操作：
+\\所有文件（包括隐藏文件） ：-a
+\\文件打印以人类可以理解的格式输出 (例如，使用454M 而不是 454279954) : -h
+\\文件以最近访问顺序排序：-t
+\\以彩色文本显示输出结果--color=auto
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例1.png}
+  \caption{实例1}
+\end{figure}
+
+\subsection{实例2}
+编写两个bash函数 marco 和 polo 执行下面的操作。 每当你执行 marco 时，当前的工作目录应当以某种形式保存，当执行 polo 时，无论现在处在什么目录下，都应当 cd 回到当时执行 marco 的目录。 为了方便debug，你可以把代码写在单独的文件 marco.sh 中，并通过 source marco.sh命令，（重新）加载函数。通过source 来加载函数，随后可以在 bash 中直接使用。
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例2-1.png}
+  \caption{实例2}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例2-2.png}
+  \caption{实例2}
+\end{figure}
+
+\subsection{实例3}
+假设您有一个命令，它很少出错。因此为了在出错时能够对其进行调试，需要花费大量的时间重现错误并捕获输出。 编写一段bash脚本，运行如下的脚本直到它出错，将它的标准输出和标准错误流记录到文件，并在最后输出所有内容。
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例3-1.png}
+  \caption{实例3}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例3-2.png}
+  \caption{实例3}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例3-3.png}
+  \caption{实例3}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例3-4.png}
+  \caption{实例3}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例3-5.png}
+  \caption{实例3}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例3-6.png}
+  \caption{实例3}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例3-7.png}
+  \caption{实例3}
+\end{figure}
+
+\subsection{实例4}
+本节课我们讲解的 find 命令中的 -exec 参数非常强大，它可以对我们查找的文件进行操作。 我们已经知道，命令行可以从参数或标准输入接受输入。在用管道连接命令时，我们将标准输出和标准输入连接起来，但是有些命令，例如tar 则需要从参数接受输入。这里我们可以使用xargs 命令，它可以使用标准输入中的内容作为参数。 例如 ls | xargs rm 会删除当前目录中的所有文件。您的任务是编写一个命令，它可以递归地查找文件夹中所有的HTML文件，并将它们压缩成zip文件。注意，即使文件名中包含空格，您的命令也应该能够正确执行（提示：查看 xargs的参数-d）
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例4.png}
+  \caption{实例4}
+\end{figure}
+
+\subsection{实例5}
+编写一个命令或脚本递归的查找文件夹中最近使用的文件。更通用的做法，可以按照最近的使用时间列出文件 find . -type f -print0 | xargs -0 ls -lt | head -1
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例5.png}
+  \caption{实例5}
+\end{figure}
+
+\subsection{实例6}
+完成vimtutor
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例6.png}
+  \caption{实例6}
+\end{figure}
+
+\subsection{实例7}
+Bash 中的字符串通过 ' 和 " 分隔符来定义，但是它们的含义并不相同。以 ' 定义的字符串为原义字符串，其中的变量不会被转义，而 " 定义的字符串会将变量值进行替换。
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例7.png}
+  \caption{实例7}
+\end{figure}
+
+\subsection{实例8}
+和其他大多数的编程语言一样，bash 也支持 if, case, while 和 for 这些控制流关键字。同样地， bash 也支持函数，它可以接受参数并基于参数进行操作。下面这个函数是一个例子，它会创建一个文件夹并使用 cd 进入该文件夹。
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例8.png}
+  \caption{实例8}
+\end{figure}
+
+\subsection{实例9}
+退出码可以搭配 \&\&（与操作符）和 ||（或操作符）使用，用来进行条件判断，决定是否执行其他程序。它们都属于短路 运算符（short-circuiting） 同一行的多个命令可以用 ; 分隔。程序 true 的返回码永远是 0，false 的返回码永远是 1。
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例9.png}
+  \caption{实例9}
+\end{figure}
+
+\subsection{实例10}
+这段脚本会遍历我们提供的参数，使用 grep 搜索字符串 foobar，如果没有找到，则将其作为注释追加到文件中。
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例10.png}
+  \caption{实例10}
+\end{figure}
+
+\subsection{实例11}
+所有的类 UNIX 系统都包含一个名为 find 的工具，它是 shell 上用于查找文件的绝佳工具。find 命令会递归地搜索符合条件的文件
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例11.png}
+  \caption{实例11}
+\end{figure}
+
+\subsection{实例12}
+除了列出所寻找的文件之外，find 还能对所有查找到的文件进行操作。这能极大地简化一些单调的任务。
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例12.png}
+  \caption{实例12}
+\end{figure}
+
+\subsection{实例13}
+主函数没有被调用\\
+从 0 而不是 1 开始\\
+在 15 的整数倍的时候在不同行打印 “fizz” 和 “buzz”\\
+在 5 的整数倍的时候打印 “fizz”\\
+采用硬编码的参数 10 而不是从命令控制行读取参数\\\\
+
+主函数没有被调用\\
+G 文件尾\\
+o 向下打开一个新行\\
+输入 “if name …”\\
+从 0 而不是 1 开始\\
+搜索 /range\\
+ww 向后移动两个词\\
+i 插入文字， “1, “\\
+ea 在 limit 后插入， “+1”\\
+在新的一行 “fizzbuzz”\\
+jj\$i 插入文字到行尾\\
+加入 “, end=’’”\\
+jj. 重复第二个打印\\
+jjo 在 if 打开一行\\
+加入 “else: print()”\\
+fizz fizz\\
+ci' 变到 fizz\\
+命令控制行参数\\
+ggO 向上打开\\
+“import sys”\\
+/10\\
+ci( to “int(sys.argv[1])”\\
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例13-1.png}
+  \caption{实例13}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例13-2.png}
+  \caption{实例13}
+\end{figure}
+
+\subsection{实例14}
+统计words文件 (/usr/share/dict/words) 中包含至少三个a 且不以's 结尾的单词个数。
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例14.png}
+  \caption{实例14}
+\end{figure}
+
+\subsection{实例15}
+\$ 符号表示您现在的身份不是 root 用户（稍后会介绍）。在这个提示符中，您可以输入 命令 ，命令最终会被 shell 解析。最简单的命令是执行一个程序：
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例15.png}
+  \caption{实例15}
+\end{figure}
+
+\subsection{实例16}
+我们可以在执行命令的同时向程序传递 参数
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例16.png}
+  \caption{实例16}
+\end{figure}
+
+\subsection{实例17}
+当我们执行 echo 命令时，shell 了解到需要执行 echo 这个程序，随后它便会在 $PATH 中搜索由 : 所分割的一系列目录，基于名字搜索该程序。当找到该程序时便执行（假定该文件是 可执行程序，后续课程将详细讲解）。确定某个程序名代表的是哪个具体的程序，可以使用 which 程序。我们也可以绕过 $PATH，通过直接指定需要执行的程序的路径来执行该程序
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例17.png}
+  \caption{实例17}
+\end{figure}
+
+\subsection{实例18}
+相对路径是指相对于当前工作目录的路径，当前工作目录可以使用 pwd 命令来获取。此外，切换目录需要使用 cd 命令。在路径中，. 表示的是当前目录，而 .. 表示上级目录
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例18.png}
+  \caption{实例18}
+\end{figure}
+
+\subsection{实例19}
+为了查看指定目录下包含哪些文件，我们使用 ls 命令
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例19.png}
+  \caption{实例19}
+\end{figure}
+
+\subsection{实例20}
+| 操作符允许我们将一个程序的输出和另外一个程序的输入连接起来
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例20.png}
+  \caption{实例20}
+\end{figure}
+
+\section{练习感悟}
+在这次实验中，我深入学习了多个关键技术领域，包括 Shell 工具、Vim 编辑器和数据整理方法。每个实例都提供了实际的应用场景，帮助我更好地理解和掌握这些工具的使用。特别是在以下几个方面，我有了显著的收获：\\
+
+Shell 脚本编写：\\
+
+编写和调试 Shell 脚本使我更加熟悉了 Bash 脚本的基本语法和调试技巧。例如，通过编写 marco 和 polo 函数，我学会了如何保存和恢复工作目录，这在实际开发中非常实用。\\
+
+find 和 xargs 命令的应用：\\
+
+实验中涉及到的 find 和 xargs 命令让我更好地理解了如何使用这些工具进行文件查找和处理。这些命令在处理大量文件和数据时非常强大，特别是 xargs 的 -d 参数让我能够处理包含空格的文件名。\\
+
+图形和文本结合：\\
+
+在报告中，通过图形展示结果的方式让我学会了如何在 LaTeX 中处理图像文件，并结合文字进行说明。这种方法增强了报告的可读性和专业性。\\
+
+Vim 编辑器的使用：\\
+
+完成 vimtutor 的练习让我对 Vim 编辑器有了更深入的了解。Vim 的强大功能和灵活性使得文本编辑工作更加高效。\\
+
+处理命令输出：\\
+
+通过练习如何将命令的输出连接到其他程序输入，我掌握了使用 | 操作符来创建更复杂的数据处理管道，这在处理系统任务时非常有用。\\
+
+总体来说，这次实验不仅提升了我的技术能力，也增强了我对常用开发工具和命令的理解。我将这些知识应用于实际工作中，能够更高效地完成任务，并在面临新问题时有了更多的解决思路。\\
+
+\end{document}
