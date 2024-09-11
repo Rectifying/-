@@ -1,0 +1,209 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[UTF8]{ctex}
+\usepackage{graphicx}
+\begin{document}
+  \title{实验报告4}
+  \author{\\姓名:郭千纯\\
+		\\学号：23020007033\\
+		\\课程：系统开发工具基础\\}
+  \date{\today\\}
+  \maketitle
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+\section{github链接}
+
+
+\section{练习内容}
+调试及性能分析\\
+元编程演示实验\\
+PyTorch编程\\
+
+\section{实例及结果}
+
+\subsection{实例1}
+使用 print() 进行调试,以追踪变量的值和程序执行流程。
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例1.png}
+  \caption{实例1}
+\end{figure}
+
+\subsection{实例2}
+用 import logging 和 logging.basicConfig(level=logging.DEBUG) 设置日志记录。logging 模块可以更好地控制输出内容的级别（如 DEBUG, INFO, WARNING），并能方便地将日志信息保存到文件中。
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例2.png}
+  \caption{实例2}
+\end{figure}
+
+\subsection{实例3}
+在代码中插入 import pdb; pdb.set\_trace()。逐步执行代码、检查变量值、设置断点等，帮助定位错误。
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例3.png}
+  \caption{实例3}
+\end{figure}
+
+\subsection{实例4}
+timeit 可以精确测量小段代码的执行时间，适合比较不同实现的性能。
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例4.png}
+  \caption{实例4}
+\end{figure}
+
+\subsection{实例5}
+cProfile 显示函数调用的时间和次数，有助于识别性能瓶颈。
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例5.png}
+  \caption{实例5}
+\end{figure}
+
+\subsection{实例6}
+使用 type 函数动态生成类。
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例6.png}
+  \caption{实例6}
+\end{figure}
+
+\subsection{实例7}
+定义一个装饰器来修改函数的输入或输出。
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例7.png}
+  \caption{实例7}
+\end{figure}
+
+\subsection{实例8}
+定义一个类装饰器以修改类的行为。
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例8.png}
+  \caption{实例8}
+\end{figure}
+
+\subsection{实例9}
+创建一个元类并在类定义中使用它。
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例9.png}
+  \caption{实例9}
+\end{figure}
+
+\subsection{实例10}
+使用 eval 执行表达式，或使用 exec 执行多行代码。
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例10.png}
+  \caption{实例10}
+\end{figure}
+
+\subsection{实例11}
+使用 torch.tensor() 创建张量。
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例11.png}
+  \caption{实例11}
+\end{figure}
+
+\subsection{实例12}
+创建张量并进行基本运算。
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例12.png}
+  \caption{实例12}
+\end{figure}
+
+\subsection{实例13}
+使用 requires\_grad=True 追踪张量的梯度。
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例13.png}
+  \caption{实例13}
+\end{figure}
+
+\subsection{实例14}
+定义一个神经网络类。
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例14.png}
+  \caption{实例14}
+\end{figure}
+
+\subsection{实例15}
+将输入传递给模型，获取输出。
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例15.png}
+  \caption{实例15}
+\end{figure}
+
+\subsection{实例16}
+使用 setattr 动态设置对象属性。
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例16.png}
+  \caption{实例16}
+\end{figure}
+
+\subsection{实例17}
+使用 getattr 动态访问对象属性。
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例17.png}
+  \caption{实例17}
+\end{figure}
+
+\subsection{实例18}
+使用 \_\_call\_\_ 使对象可调用。
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例18.png}
+  \caption{实例18}
+\end{figure}
+
+\subsection{实例19}
+使用装饰器为函数添加缓存功能。
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例19.png}
+  \caption{实例19}
+\end{figure}
+
+
+\subsection{实例20}
+使用 classmethod 创建工厂方法。
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=1\textwidth]{实例20.png}
+  \caption{实例20}
+\end{figure}
+
+\section{练习感悟}
+调试和性能分析是编程过程中不可或缺的部分。通过 `print()`、`logging` 和 `pdb` 等工具，我们可以更好地理解代码的执行过程，快速定位问题。使用 `cProfile` 和 `timeit` 进行性能分析，使我们能够识别性能瓶颈，从而优化代码，提升程序效率。元编程为我们提供了强大的工具，允许在运行时动态创建和修改类、函数和属性。通过实例化类、使用装饰器和元类等技术，我们可以实现更灵活和动态的编程风格。这种灵活性可以让我们的代码更加模块化和可重用。通过 PyTorch 的基础学习，我体会到其强大的深度学习功能和友好的接口设计。使用张量运算和自动微分，我们可以轻松构建和训练神经网络，快速实现各种机器学习模型。PyTorch 的动态计算图特性，使得模型的调试和修改变得更加直观。通过实践不同的实例，我对调试、元编程和 PyTorch 的理解加深了。每一个代码示例不仅是对理论知识的应用，更是对实际问题的解决方案。动手实验能帮助我更好地掌握这些技术。编程是一个不断探索和学习的过程。通过这些练习，我意识到还有许多高级特性和技术等待我去发现。保持好奇心和学习热情，将对我的编程能力和项目实践产生积极的影响。总之，本次练习让我在调试、性能分析、元编程和 PyTorch 的应用上获得了新的视角和深刻的理解。未来我会继续深入研究这些领域，并将所学知识应用到实际项目中，以提高自己的编程水平和解决问题的能力。
+
+\end{document}
